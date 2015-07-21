@@ -63,7 +63,77 @@
 
   <article class="post-content">
     <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"></h2>
+<h2 id="sec-1">The Actual Problem</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+With disk drives getting larger and larger manufacturers have had to
+change the default block size from 512 bytes to 4,096 bytes. These
+new drives are known as "Advanced Format" or 4K drives. Initially
+this was only seen on drives larger than 1 TB but will soon be on
+all drives. As part of this change there is an issue with OS X
+writing the boot helper code to these drives when booted from the
+drive. Because of this they require a workaround to boot on their
+own.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Solution</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Pre-condition
+</p>
+
+<ul class="org-ul">
+<li>Unibeast is needed
+</li>
+
+<li>access terminal of a bootable USB
+</li>
+</ul>
+
+<p>
+Steps
+</p>
+
+<ol class="org-ol">
+<li>Install using UniBeast
+</li>
+
+<li>Boot new installation using UniBeast created USB.
+</li>
+
+<li>Run MultiBeast and install as normal
+</li>
+
+<li>Reboot system back into OS X installer.
+</li>
+
+<li>Run Disk Utility and unmount the drive you installed OS X
+on. Right click on the volume and select Unmount. 
+</li>
+
+<li>Launch Terminal and execute the following command:
+</li>
+</ol>
+
+<pre class="example">
+Code:
+   dd if=/usr/standalone/i386/boot1h of=/dev/disk0s2
+</pre>
+
+<ol class="org-ol">
+<li>Exit Terminal
+</li>
+
+<li>Reboot Normally
+</li>
+
+<li>enjoy!
+</li>
+</ol>
+</div>
 </div>
 
   </article>

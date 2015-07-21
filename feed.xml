@@ -6,14 +6,84 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 21 Jul 2015 22:42:36 +0800</pubDate>
-    <lastBuildDate>Tue, 21 Jul 2015 22:42:36 +0800</lastBuildDate>
+    <pubDate>Tue, 21 Jul 2015 22:46:54 +0800</pubDate>
+    <lastBuildDate>Tue, 21 Jul 2015 22:46:54 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>fix of hacktosh boot error</title>
         <description>&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-1&quot;&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;The Actual Problem&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;p&gt;
+With disk drives getting larger and larger manufacturers have had to
+change the default block size from 512 bytes to 4,096 bytes. These
+new drives are known as &quot;Advanced Format&quot; or 4K drives. Initially
+this was only seen on drives larger than 1 TB but will soon be on
+all drives. As part of this change there is an issue with OS X
+writing the boot helper code to these drives when booted from the
+drive. Because of this they require a workaround to boot on their
+own.  
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;Solution&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+&lt;p&gt;
+Pre-condition
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Unibeast is needed
+&lt;/li&gt;
+
+&lt;li&gt;access terminal of a bootable USB
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+Steps
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;Install using UniBeast
+&lt;/li&gt;
+
+&lt;li&gt;Boot new installation using UniBeast created USB.
+&lt;/li&gt;
+
+&lt;li&gt;Run MultiBeast and install as normal
+&lt;/li&gt;
+
+&lt;li&gt;Reboot system back into OS X installer.
+&lt;/li&gt;
+
+&lt;li&gt;Run Disk Utility and unmount the drive you installed OS X
+on. Right click on the volume and select Unmount. 
+&lt;/li&gt;
+
+&lt;li&gt;Launch Terminal and execute the following command:
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre class=&quot;example&quot;&gt;
+Code:
+   dd if=/usr/standalone/i386/boot1h of=/dev/disk0s2
+&lt;/pre&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;Exit Terminal
+&lt;/li&gt;
+
+&lt;li&gt;Reboot Normally
+&lt;/li&gt;
+
+&lt;li&gt;enjoy!
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 21 Jul 2015 00:00:00 +0800</pubDate>
