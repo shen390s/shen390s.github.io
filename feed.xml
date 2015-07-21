@@ -6,8 +6,8 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 21 Jul 2015 23:12:19 +0800</pubDate>
-    <lastBuildDate>Tue, 21 Jul 2015 23:12:19 +0800</lastBuildDate>
+    <pubDate>Tue, 21 Jul 2015 23:13:40 +0800</pubDate>
+    <lastBuildDate>Tue, 21 Jul 2015 23:13:40 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -88,15 +88,13 @@ on. Right click on the volume and select Unmount.
 &lt;/li&gt;
 
 &lt;li&gt;Launch Terminal and execute the following command:
-&lt;/li&gt;
-&lt;/ol&gt;
 
 &lt;pre class=&quot;example&quot;&gt;
-Code:
+Code: 
    dd if=/usr/standalone/i386/boot1h of=/dev/disk0s2
 &lt;/pre&gt;
+&lt;/li&gt;
 
-&lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;Exit Terminal
 &lt;/li&gt;
 
