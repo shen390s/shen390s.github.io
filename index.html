@@ -1,23 +1,27 @@
----
-layout: default
----
+<p>
+Welcome to my blog.
+</p>
 
-<div class="home">
+<p>
+I am @shen390s on <a href="https://github.com/ardumont">github</a> 
+</p>
 
-  <h1 class="page-heading">Posts</h1>
+<p>
+Here you will find my notes on multiple subjects that I came across at some point.
+</p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<p>
+Sometimes, these are:
+</p>
+<ul class="org-ul">
+<li>notes
+</li>
+<li>articles
+</li>
+<li>to reproduce some advanced automation I keep forgetting.
+</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<p>
+With a little luck, this could help others too.
+</p>
