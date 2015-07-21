@@ -6,15 +6,38 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 21 Jul 2015 22:46:54 +0800</pubDate>
-    <lastBuildDate>Tue, 21 Jul 2015 22:46:54 +0800</lastBuildDate>
+    <pubDate>Tue, 21 Jul 2015 23:09:59 +0800</pubDate>
+    <lastBuildDate>Tue, 21 Jul 2015 23:09:59 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>fix of hacktosh boot error</title>
+        <title>Boot0 Error The Official Guide</title>
         <description>&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-1&quot;&gt;The Actual Problem&lt;/h2&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;The Issue:&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;p&gt;
+Upon successful installation, boot from hard drive results in this:
+&lt;/p&gt;
+
+&lt;p&gt;
+Loading Operating System …
+&lt;/p&gt;
+
+&lt;pre class=&quot;example&quot;&gt;
+boot0: GPT
+boot0: test
+boot0: test
+boot0: GPT
+boot0: test
+boot0: test
+boot0: error
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;The Actual Problem&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
 &lt;p&gt;
 With disk drives getting larger and larger manufacturers have had to
 change the default block size from 512 bytes to 4,096 bytes. These
@@ -28,9 +51,9 @@ own.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-2&quot;&gt;Solution&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+&lt;div id=&quot;outline-container-sec-3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-3&quot;&gt;Solution&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
 &lt;p&gt;
 Pre-condition
 &lt;/p&gt;

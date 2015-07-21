@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>fix of hacktosh boot error</title>
-  <meta name="description" content="Solution of fix hacktosh boot failure">
+  <title>Boot0 Error The Official Guide</title>
+  <meta name="description" content="Boot0 Error [[http://www.tonymacx86.com/general-help/65706-boot0-error-official-guide.html][The Official Guide]]">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/osx/2015/07/21/fix-of-hacktosh-boot-error.html">
@@ -57,14 +57,37 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">fix of hacktosh boot error</h1>
-    <p class="post-meta">Jul 21, 2015 • Rongsong Shen</p>
+    <h1 class="post-title">Boot0 Error The Official Guide</h1>
+    <p class="post-meta">Jul 21, 2015 • MacMan @ tonymacx86</p>
   </header>
 
   <article class="post-content">
     <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">The Actual Problem</h2>
+<h2 id="sec-1">The Issue:</h2>
 <div class="outline-text-2" id="text-1">
+<p>
+Upon successful installation, boot from hard drive results in this:
+</p>
+
+<p>
+Loading Operating System …
+</p>
+
+<pre class="example">
+boot0: GPT
+boot0: test
+boot0: test
+boot0: GPT
+boot0: test
+boot0: test
+boot0: error
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">The Actual Problem</h2>
+<div class="outline-text-2" id="text-2">
 <p>
 With disk drives getting larger and larger manufacturers have had to
 change the default block size from 512 bytes to 4,096 bytes. These
@@ -78,9 +101,9 @@ own.
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Solution</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Solution</h2>
+<div class="outline-text-2" id="text-3">
 <p>
 Pre-condition
 </p>
